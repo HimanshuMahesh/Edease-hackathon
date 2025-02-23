@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 251 27% 8%;
+    --foreground: 0 0% 98%;
+    --card: 251 27% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 251 27% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 251 27% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 251 27% 12%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 251 27% 12%;
+    --input: 251 27% 12%;
+    --ring: 142 76% 36%;
+    --chart-1: 142 76% 36%;
+    --chart-2: 142 76% 46%;
+    --chart-3: 142 76% 56%;
+    --chart-4: 142 76% 66%;
+    --chart-5: 142 76% 76%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 251 27% 8%;
+    --foreground: 0 0% 98%;
+    --card: 251 27% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 251 27% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 251 27% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 251 27% 12%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 251 27% 12%;
+    --input: 251 27% 12%;
+    --ring: 142 76% 36%;
+    --chart-1: 142 76% 36%;
+    --chart-2: 142 76% 46%;
+    --chart-3: 142 76% 56%;
+    --chart-4: 142 76% 66%;
+    --chart-5: 142 76% 76%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.animated-dotted-background {
+  background-color: #060508;
+  background-image: radial-gradient(#2f422f 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+@layer utilities {
+  .gradient-title {
+    @apply font-extrabold bg-gradient-to-br from-[#2e7d32] via-[#4caf50] to-[#81c784] bg-clip-text tracking-tighter text-transparent pr-2 pb-2;
+  }
+}
+
+.wmde-markdown ul {
+  list-style-type: disc;
+  padding-left: 15px !important;
+  color: white;
+}
+
+.button-hover {
+  @apply transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg;
+}
+
+.card-hover {
+  @apply transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl;
+}
+
+.faq-item {
+  @apply transition-all duration-300 ease-in-out hover:bg-gray-700/50;
+}
